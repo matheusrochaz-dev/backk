@@ -3,7 +3,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["https://codax-six.vercel.app"])  
+CORS(app, origins=["https://codax-six.vercel.app", "http://127.0.0.1:5500"])  
 ARQUIVO_COMENTARIOS = "comentarios.txt"
 
 @app.route('/comentarios', methods=['GET'])
