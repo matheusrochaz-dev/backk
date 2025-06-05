@@ -16,7 +16,7 @@ def obter_comentarios():
     
     return jsonify({"comentarios": comentarios})
 
-@app.route('/comentarios', methods=['POST'])
+@app.route('/comentar', methods=['POST'])
 def comentar():
     comentario = request.json.get("comentario", "").strip()
     if comentario:
