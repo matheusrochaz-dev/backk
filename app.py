@@ -18,7 +18,7 @@ def obter_comentarios():
 
 @app.route('/comentar', methods=['POST'])
 def comentar():
-    comentario = request.json.get("comentario", "").strip()
+    comentario = request.json.get("comentarios", "").strip()
     if comentario:
         with open(ARQUIVO_COMENTARIOS, "a", encoding="utf-8") as f:
             f.write(comentario + "\n\n")
