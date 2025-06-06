@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 CORS(app, origins=["https://codax-six.vercel.app", "http://127.0.0.1:5500"])  
-ARQUIVO_COMENTARIOS = comentarios.txt
+ARQUIVO_COMENTARIOS = "comentarios.txt"
 
 @app.route('/comentarios', methods=['GET'])
 def obter_comentarios():
@@ -28,4 +28,12 @@ def comentar():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
+def salvar_comentario(comentario):
+    """Salva um comentário no arquivo comentarios.txt."""
+    if comentario.strip():  # Garante que o comentário não está vazio
+        with open(ARQUIVO_COMENTARIOS, "a", encoding="utf-8") as f:
+            f.write(comentario.strip() + "\n\n")
+        return True
+    return False
 
