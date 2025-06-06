@@ -22,8 +22,6 @@ def comentar():
     if comentario:
         with open(ARQUIVO_COMENTARIOS, "a", encoding="utf-8") as f:
             f.write(comentario + "\n\n")
-        with open("texto.txt", "a", encoding="utf-8") as f2:
-            f2.write(comentario + "\n\n")
     return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
 
 
