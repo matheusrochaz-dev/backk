@@ -5,9 +5,9 @@ import os
 
 app = Flask(__name__)
 CORS(app, origins=["https://codax-six.vercel.app/noticias/visita.html?", "http://127.0.0.1:5500"])  
-ARQUIVO_COMENTARIOS = "comentari.txt"
+ARQUIVO_COMENTARIOS = "comentarios.txt"
 
-@app.route('/comentariosa', methods=['GET'])
+@app.route('/comentarios', methods=['GET'])
 def obter_comentarios():
     try:
         with open(ARQUIVO_COMENTARIOS, "r", encoding="utf-8") as f:
@@ -15,9 +15,9 @@ def obter_comentarios():
     except FileNotFoundError:
         comentarios = "Nenhum comentário ainda."
     
-    return jsonify({"comentari": comentarios})
+    return jsonify({"comentarios": comentarios})
 
-@app.route('/comentara', methods=['POST'])
+@app.route('/comentario', methods=['POST'])
 def comentar():
     comentario = request.json.get("comentario", "").strip()
     if comentario:
