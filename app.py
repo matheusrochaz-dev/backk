@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Permite chamadas do frontend
 
 # Configurações do banco (use o seu host entre colchetes se for IPv6)
-DB_HOST = "[2600:1f1e:75b:4b0f:88e8:c066:9023:7a74]"
+DB_HOST = "2600:1f1e:75b:4b0f:88e8:c066:9023:7a74"
 DB_NAME = "postgres"
 DB_USER = "postgres"
 DB_PASSWORD = "@FAMILIA1234@"
@@ -24,7 +24,7 @@ def get_db_connection():
     return conn
 
 # Cria a tabela caso não exista
-def criar_tabela():
+def criartabela():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("""
@@ -63,8 +63,7 @@ def enviar_comentario():
     cur.close()
     conn.close()
     return jsonify({"message": "Comentário enviado!"}), 201
-
 if __name__ == '__main__':
-    criar_tabela()
+    criartabela()
     app.run(debug=True)
 
