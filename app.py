@@ -4,7 +4,7 @@ import requests
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["https://codax-six.vercel.app", "http://127.0.0.1:5500"])
+CORS(app, origins=["https://codax-six.vercel.app", "https://backk-vty6.onrender.com"])
 
 # 🔑 Substitua pelas suas credenciais
 SUPABASE_URL = "https://aqvrwljdaoraeiwverku.supabase.co"
