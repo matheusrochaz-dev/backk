@@ -63,6 +63,7 @@ def enviar_comentario():
     cur.close()
     conn.close()
     return jsonify({"message": "Comentário enviado!"}), 201
+
 if __name__ == '__main__':
     criartabela()
     app.run(debug=True)
