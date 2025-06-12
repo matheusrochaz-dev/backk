@@ -10,7 +10,7 @@ CORS(app)  # Permite chamadas do frontend
 DB_HOST = "2600:1f1e:75b:4b0f:88e8:c066:9023:7a74"
 DB_NAME = "postgres"
 DB_USER = "postgres"
-DB_PASSWORD = "@FAMILIA1234@"
+DB_PASSWORD = "Mr201008@"
 DB_PORT = 5432
 
 def get_db_connection():
