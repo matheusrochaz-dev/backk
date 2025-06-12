@@ -7,8 +7,8 @@ app = Flask(__name__)
 CORS(app, origins=["https://codax-six.vercel.app", "http://127.0.0.1:5500"])
 
 # 🔑 Substitua pelas suas credenciais
-SUPABASE_URL = "https://SEU-PROJETO.supabase.co"
-SUPABASE_API_KEY = "SUA-API-KEY-ANON"
+SUPABASE_URL = "https://aqvrwljdaoraeiwverku.supabase.co"
+SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFxdnJ3bGpkYW9yYWVpd3Zlcmt1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3NTY5NzYsImV4cCI6MjA2NTMzMjk3Nn0.d_9NmknRUALzVW0McoBJzc79NwM0kY2Yj0s48LOGTBE"
 
 headers = {
     "apikey": SUPABASE_API_KEY,
