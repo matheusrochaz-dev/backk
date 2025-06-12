@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Permite chamadas do frontend
 
 # Configurações do banco (use o seu host entre colchetes se for IPv6)
-DB_HOST = "2600:1f1e:75b:4b0f:88e8:c066:9023:7a74"
+DB_HOST = "xyxjjsjjhntqtyuogzox"
 DB_NAME = "postgres"
 DB_USER = "postgres"
 DB_PASSWORD = "Mr201008@"
