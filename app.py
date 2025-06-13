@@ -18,7 +18,6 @@ headers = {
 
 @app.route('/comentarios', methods=['GET'])
 def obter_comentarios():
-    url = f"{SUPABASE_URL}/rest/v1/comentarios?select=comentario,data&order=data.desc"
     response = requests.get(url, headers=headers)
     if response.ok:
         dados = response.json()
