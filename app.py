@@ -47,7 +47,7 @@ def comentar():
 # tabela comentarios 2
 
 @app.route('/comentariosDois', methods=['GET'])
-def obter_comentarios():
+def obter_comentariosDOIS():
     url = f"{SUPABASE_URL}/rest/v1/comentariosDois?select=comentario,data&order=data.desc"
     response = requests.get(url, headers=headers)
     if response.ok:
@@ -57,7 +57,7 @@ def obter_comentarios():
     return jsonify({"erro": "Erro ao buscar comentários."}), 500
 
 @app.route('/comentarDois', methods=['POST'])
-def comentar():
+def comentarDOIS():
     comentario = request.json.get("comentario", "").strip()
     if comentario:
         url = f"{SUPABASE_URL}/rest/v1/comentariosDois"
