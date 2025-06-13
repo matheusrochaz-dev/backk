@@ -76,3 +76,201 @@ def comentarDOIS():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
+# tabela comentarioE
+
+@app.route('/comentariosE', methods=['GET'])
+def obter_comentariosE():
+    url = f"{SUPABASE_URL}/rest/v1/comentariosE?select=comentario,data&order=data.desc"
+    response = requests.get(url, headers=headers)
+    if response.ok:
+        dados = response.json()
+        comentarios = "\n\n".join([c["comentario"] for c in dados])
+        return jsonify({"comentarios": comentarios})
+    return jsonify({"erro": "Erro ao buscar comentários."}), 500
+
+@app.route('/comentarE', methods=['POST'])
+def comentarE():
+    comentario = request.json.get("comentario", "").strip()
+    if comentario:
+        url = f"{SUPABASE_URL}/rest/v1/comentariosE"
+        payload = {
+            "comentario": comentario
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        if response.ok:
+            return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
+        else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
+            return jsonify({"erro": "Erro ao salvar comentário."}), 500
+    return jsonify({"erro": "Comentário vazio."}), 400
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
+# tabela comentariosL
+
+@app.route('/comentariosL', methods=['GET'])
+def obter_comentariosL():
+    url = f"{SUPABASE_URL}/rest/v1/comentariosL?select=comentario,data&order=data.desc"
+    response = requests.get(url, headers=headers)
+    if response.ok:
+        dados = response.json()
+        comentarios = "\n\n".join([c["comentario"] for c in dados])
+        return jsonify({"comentarios": comentarios})
+    return jsonify({"erro": "Erro ao buscar comentários."}), 500
+
+@app.route('/comentarL', methods=['POST'])
+def comentarDOIS():
+    comentario = request.json.get("comentario", "").strip()
+    if comentario:
+        url = f"{SUPABASE_URL}/rest/v1/comentariosL"
+        payload = {
+            "comentario": comentario
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        if response.ok:
+            return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
+        else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
+            return jsonify({"erro": "Erro ao salvar comentário."}), 500
+    return jsonify({"erro": "Comentário vazio."}), 400
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+    
+# tabela comentarios 2
+
+@app.route('/comentariosN', methods=['GET'])
+def obter_comentariosDOIS():
+    url = f"{SUPABASE_URL}/rest/v1/comentariosN?select=comentario,data&order=data.desc"
+    response = requests.get(url, headers=headers)
+    if response.ok:
+        dados = response.json()
+        comentarios = "\n\n".join([c["comentario"] for c in dados])
+        return jsonify({"comentarios": comentarios})
+    return jsonify({"erro": "Erro ao buscar comentários."}), 500
+
+@app.route('/comentarN', methods=['POST'])
+def comentarDOIS():
+    comentario = request.json.get("comentario", "").strip()
+    if comentario:
+        url = f"{SUPABASE_URL}/rest/v1/comentariosN"
+        payload = {
+            "comentario": comentario
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        if response.ok:
+            return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
+        else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
+            return jsonify({"erro": "Erro ao salvar comentário."}), 500
+    return jsonify({"erro": "Comentário vazio."}), 400
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
+# tabela comentariosO
+
+@app.route('/comentariosO', methods=['GET'])
+def obter_comentariosO():
+    url = f"{SUPABASE_URL}/rest/v1/comentariosO?select=comentario,data&order=data.desc"
+    response = requests.get(url, headers=headers)
+    if response.ok:
+        dados = response.json()
+        comentarios = "\n\n".join([c["comentario"] for c in dados])
+        return jsonify({"comentarios": comentarios})
+    return jsonify({"erro": "Erro ao buscar comentários."}), 500
+
+@app.route('/comentarO', methods=['POST'])
+def comentarO():
+    comentario = request.json.get("comentario", "").strip()
+    if comentario:
+        url = f"{SUPABASE_URL}/rest/v1/comentariosO"
+        payload = {
+            "comentario": comentario
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        if response.ok:
+            return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
+        else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
+            return jsonify({"erro": "Erro ao salvar comentário."}), 500
+    return jsonify({"erro": "Comentário vazio."}), 400
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
+# tabela comentariosS
+
+@app.route('/comentariosS', methods=['GET'])
+def obter_comentariosS():
+    url = f"{SUPABASE_URL}/rest/v1/comentariosS?select=comentario,data&order=data.desc"
+    response = requests.get(url, headers=headers)
+    if response.ok:
+        dados = response.json()
+        comentarios = "\n\n".join([c["comentario"] for c in dados])
+        return jsonify({"comentarios": comentarios})
+    return jsonify({"erro": "Erro ao buscar comentários."}), 500
+
+@app.route('/comentarS', methods=['POST'])
+def comentarS():
+    comentario = request.json.get("comentario", "").strip()
+    if comentario:
+        url = f"{SUPABASE_URL}/rest/v1/comentariosS"
+        payload = {
+            "comentario": comentario
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        if response.ok:
+            return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
+        else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
+            return jsonify({"erro": "Erro ao salvar comentário."}), 500
+    return jsonify({"erro": "Comentário vazio."}), 400
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
+
+# tabela comentariosV
+
+@app.route('/comentariosV', methods=['GET'])
+def obter_comentariosV():
+    url = f"{SUPABASE_URL}/rest/v1/comentariosV?select=comentario,data&order=data.desc"
+    response = requests.get(url, headers=headers)
+    if response.ok:
+        dados = response.json()
+        comentarios = "\n\n".join([c["comentario"] for c in dados])
+        return jsonify({"comentarios": comentarios})
+    return jsonify({"erro": "Erro ao buscar comentários."}), 500
+
+@app.route('/comentarV', methods=['POST'])
+def comentarV():
+    comentario = request.json.get("comentario", "").strip()
+    if comentario:
+        url = f"{SUPABASE_URL}/rest/v1/comentariosV"
+        payload = {
+            "comentario": comentario
+        }
+        response = requests.post(url, headers=headers, json=payload)
+        if response.ok:
+            return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
+        else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
+            return jsonify({"erro": "Erro ao salvar comentário."}), 500
+    return jsonify({"erro": "Comentário vazio."}), 400
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
