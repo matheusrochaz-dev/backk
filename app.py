@@ -48,7 +48,7 @@ def comentar():
 
 @app.route('/comentariosDois', methods=['GET'])
 def obter_comentarios():
-    url = f"{SUPABASE_URL}/rest/v1/comentariosDois?select=comentarioDois,data&order=data.desc"
+    url = f"{SUPABASE_URL}/rest/v1/comentariosDois?select=comentario,data&order=data.desc"
     response = requests.get(url, headers=headers)
     if response.ok:
         dados = response.json()
