@@ -18,7 +18,7 @@ headers = {
 
 @app.route('/comentarios', methods=['GET'])
 def obter_comentarios():
-    url = f"{SUPABASE_URL}/rest/v1/comentarios?select=comentario,data&order=data.desc"
+    url = f"{SUPABASE_URL}/rest/v1/comentarios?select=comentarios_duplicate,data&order=data.desc"
     response = requests.get(url, headers=headers)
     if response.ok:
         dados = response.json()
@@ -30,7 +30,7 @@ def obter_comentarios():
 def comentar():
     comentario = request.json.get("comentario", "").strip()
     if comentario:
-        url = f"{SUPABASE_URL}/rest/v1/comentarios"
+        url = f"{SUPABASE_URL}/rest/v1/comentarios_duplicate"
         payload = {
             "comentario": comentario
         }
