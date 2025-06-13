@@ -38,6 +38,8 @@ def comentar():
         if response.ok:
             return jsonify({"message": "Comentário adicionado com sucesso!"}), 201
         else:
+            print("STATUS:", response.status_code)
+            print("TEXTO:", response.text)
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
