@@ -73,9 +73,7 @@ def comentarDOIS():
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+ 
 
 # tabela comentarioE
 
@@ -106,9 +104,7 @@ def comentarE():
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+ 
 
 # tabela comentariosL
 
@@ -139,9 +135,7 @@ def comentarDOIS():
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+ 
     
 # tabela comentariosN
 
@@ -172,9 +166,7 @@ def comentarDOIS():
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+ 
 
 # tabela comentariosO
 
@@ -205,9 +197,7 @@ def comentarO():
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+ 
 
 # tabela comentariosS
 
@@ -238,9 +228,7 @@ def comentarS():
             return jsonify({"erro": "Erro ao salvar comentário."}), 500
     return jsonify({"erro": "Comentário vazio."}), 400
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+ 
 
 # tabela comentariosV
 
