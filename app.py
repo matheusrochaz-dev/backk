@@ -60,7 +60,7 @@ def obter_comentariosL():
     return jsonify({"erro": "Erro ao buscar comentários."}), 500
 
 @app.route('/comentarL', methods=['POST'])
-def comentarDOIS():
+def comentarL():
     comentario = request.json.get("comentario", "").strip()
     if comentario:
         url = f"{SUPABASE_URL}/rest/v1/comentariosL"
@@ -81,7 +81,7 @@ def comentarDOIS():
 # tabela comentariosN
 
 @app.route('/comentariosN', methods=['GET'])
-def obter_comentariosDOIS():
+def obter_comentariosN():
     url = f"{SUPABASE_URL}/rest/v1/comentariosN?select=comentario,data&order=data.desc"
     response = requests.get(url, headers=headers)
     if response.ok:
@@ -91,7 +91,7 @@ def obter_comentariosDOIS():
     return jsonify({"erro": "Erro ao buscar comentários."}), 500
 
 @app.route('/comentarN', methods=['POST'])
-def comentarDOIS():
+def comentarN():
     comentario = request.json.get("comentario", "").strip()
     if comentario:
         url = f"{SUPABASE_URL}/rest/v1/comentariosN"
